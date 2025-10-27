@@ -183,7 +183,16 @@ const GridItems = ({ data, id }: { data: any; id: number }) => {
             paddingBottom: "20px",
           }}
         >
-          <h3>{data.productName}</h3>
+          <h3>
+            {data.productName.includes("|") ? (
+              <>
+                {data.productName.split("|")[0]} <br />
+                {data.productName.split("|")[1]}
+              </>
+            ) : (
+              data.productName
+            )}
+          </h3>
           {id % 2 === 0 ? (
             <div className="price-info-wrapper1">
               <dl>

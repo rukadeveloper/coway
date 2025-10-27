@@ -179,7 +179,7 @@ const GridComp = () => {
       isBest: false,
       isPackage: false,
       sale: null,
-      productName: "프라임 하이브리드 (인덕션 2구 + 하이라이트 1구)",
+      productName: "프라임 하이브리드|(인덕션 2구 + 하이라이트 1구)",
       buy: "910000",
       rental: "12900",
     },
