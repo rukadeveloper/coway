@@ -7,7 +7,7 @@ const FB = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  button {
+  > button {
     width: 400px;
     margin: 0 auto;
     padding: 1rem 0;
@@ -32,6 +32,12 @@ const FB = styled.div`
 `;
 
 const FreeButton = () => {
+  const [selectedDigital, setSelectedDigital] = useState({
+    content: "coway",
+    index: 0,
+    isOpen: false,
+  });
+  const [day, setDay] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [nameData, setNameData] = useState("");
   const [phoneData, setPhoneData] = useState({
@@ -69,7 +75,9 @@ const FreeButton = () => {
           !phoneData.phoneOne ||
           !phoneData.phoneTwo ||
           !phoneData.phoneThree ||
-          !isAgreed
+          !isAgreed ||
+          !day ||
+          !selectedDigital
         }
       >
         상담 신청하기
@@ -91,6 +99,10 @@ const FreeButton = () => {
           handlePhone2={handlePhone2}
           handlePhone3={handlePhone3}
           handleAgree={handleAgree}
+          selectedDigital={selectedDigital}
+          setSelectedDigital={setSelectedDigital}
+          day={day}
+          setDay={setDay}
         />
       )}
     </FB>

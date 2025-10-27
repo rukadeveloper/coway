@@ -78,6 +78,7 @@ const EnterInput = ({
   setInputState,
   phoneState,
   setPhoneState,
+  isUp,
 }: {
   label: string;
   type: string;
@@ -90,6 +91,7 @@ const EnterInput = ({
   setInputState?: Dispatch<SetStateAction<string>>;
   phoneState?: Phone;
   setPhoneState?: Dispatch<SetStateAction<Phone>>;
+  isUp?: boolean;
 }) => {
   const handleState = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputState!(e.target.value.trim().slice(0, 3));
@@ -153,6 +155,7 @@ const EnterInput = ({
           combo_array={combo_array!}
           state={state!}
           setState={setState!}
+          isUp={isUp ? isUp : false}
         />
       )}
     </RealInput>

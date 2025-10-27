@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import AgreeBox from "../top-input/AgreeBox";
+import EnterInput from "../top-input/EnterInput";
+import type { Dispatch, SetStateAction } from "react";
+import SelectDay from "../top-input/SelectDay";
 
 const NI = styled.div`
   width: 100%;
@@ -187,46 +190,6 @@ const NI = styled.div`
       }
     }
   }
-
-  button {
-    width: 100%;
-    padding: 16px;
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    color: #10a7e0;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-
-    @media (max-width: 768px) {
-      padding: 18px;
-      font-size: 17px;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-    &:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    }
-
-    &:active:not(:disabled) {
-      transform: translateY(0);
-    }
-
-    &:disabled {
-      background: #ccc;
-      color: #666;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-  }
 `;
 
 const NewInput = ({
@@ -238,6 +201,10 @@ const NewInput = ({
   handlePhone2,
   handlePhone3,
   handleAgree,
+  selectedDigital,
+  setSelectedDigital,
+  day,
+  setDay,
 }: {
   nameData: string;
   phoneData: { phoneOne: string; phoneTwo: string; phoneThree: string };
@@ -247,13 +214,17 @@ const NewInput = ({
   handlePhone2: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handlePhone3: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleAgree: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  selectedDigital: { content: string; index: number; isOpen: boolean };
+  setSelectedDigital: Dispatch<
+    SetStateAction<{ content: string; index: number; isOpen: boolean }>
+  >;
+  day: number | null;
+  setDay: Dispatch<SetStateAction<number | null>>;
 }) => {
   return (
     <NI>
       <form>
-        <span className="title">
-          * 신용불량자는 렌탈이 제한되며,일시불로 구매 가능합니다!
-        </span>
+        <span className="title">신용불량자는 렌탈이 제한됩니다.</span>
         <div className="nameId">
           <label htmlFor="nameId">이름</label>
           <input
@@ -288,6 +259,27 @@ const NewInput = ({
             />
           </div>
         </div>
+        <EnterInput
+          label="가전제품"
+          type="combo_box"
+          forId="comboId"
+          combo_array={[
+            "정수기_32종 상담/coway",
+            "업소용 정수기/coway_company",
+            "얼음 정수기/coway_ice",
+            "침대 매트리스/matrix",
+            "공기청정기/air",
+            "의류 청정기/cloth",
+            "비데/vide",
+            "연수기/yeonsoo",
+            "인덕션/induction",
+            "안마의자/chair",
+          ]}
+          state={selectedDigital}
+          setState={setSelectedDigital}
+          isUp
+        />
+        <SelectDay day={day} setDay={setDay} />
         <div className="agrees">
           <label htmlFor="agreeId">
             <input

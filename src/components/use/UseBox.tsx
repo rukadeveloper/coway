@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const UseBoxing = styled.div`
   width: 100%;
-  padding: 26px;
+  padding: 1rem;
   background-color: rgb(243, 244, 245);
   margin-bottom: 20px;
   display: flex;

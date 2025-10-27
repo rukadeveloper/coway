@@ -23,13 +23,17 @@ const Combo = styled.div`
   }
   .list {
     position: absolute;
-    z-index: 100000;
+    z-index: 10000000000000;
     top: calc(100% + 10px);
     left: 0;
     right: 0;
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    &.up {
+      bottom: calc(100% + 10px);
+      top: auto;
+    }
     button {
       text-align: left;
       padding: 10px 16px;
@@ -49,10 +53,12 @@ const Combobox = ({
   combo_array,
   state,
   setState,
+  isUp,
 }: {
   combo_array: string[];
   state: Content;
   setState: Dispatch<SetStateAction<Content>>;
+  isUp?: boolean;
 }) => {
   return (
     <Combo>
@@ -67,7 +73,7 @@ const Combobox = ({
         <img src={"/chevron.png"} alt="chevron" />
       </button>
       {state.isOpen && (
-        <div className="list">
+        <div className={`list ${isUp ? "up" : ""}`}>
           {combo_array.map((combo: any, index: number) => (
             <button
               type="button"

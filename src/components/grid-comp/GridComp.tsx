@@ -78,7 +78,7 @@ const GridComp = () => {
     {
       gridId: 0,
       title: "침대 ~ 매트리스 렌탈 시 ~ 4개월마다 홈케어 서비스",
-      subTitle: "동시구매 10%할인 + 반값할인 + 재렌탈 할인 최대 20%",
+      subTitle: "동시구매 15%할인 + 반값할인 + 재렌탈 할인 최대 20%",
       imageUrl: "/thumb-ss1_280x280.png",
       isBest: false,
       isPackage: false,
@@ -90,7 +90,7 @@ const GridComp = () => {
     {
       gridId: 1,
       title: "침대 ~ 매트리스 렌탈 시 ~ 4개월마다 홈케어 서비스",
-      subTitle: "동시구매 10%할인 + 반값할인 + 재렌탈 할인 최대 20%",
+      subTitle: "동시구매 15%할인 + 반값할인 + 재렌탈 할인 최대 20%",
       imageUrl: "/matrix4.png",
       isBest: false,
       isPackage: true,
@@ -224,8 +224,7 @@ const GridComp = () => {
     {
       gridId: 13,
       title: "안마 베드",
-      subTitle:
-        "갤러리 매장에서 체험 후 디자인과 체형에 맞는 안마기능 제품으로|렌탈구매 가능합니다 (담당차량운행)",
+      subTitle: "",
       imageUrl: "/chair1.png",
       isBest: false,
       isPackage: false,
@@ -237,8 +236,7 @@ const GridComp = () => {
     {
       gridId: 14,
       title: "안마 베드",
-      subTitle:
-        "갤러리 매장에서 체험 후 디자인과 체형에 맞는 안마기능 제품으로|렌탈구매 가능합니다 (담당차량운행)",
+      subTitle: "",
       imageUrl: "/chair2.png",
       isBest: false,
       isPackage: false,
