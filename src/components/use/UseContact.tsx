@@ -13,6 +13,10 @@ const US = styled.div`
       font-size: 20px;
     }
   }
+  h3 {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
   > p {
     text-align: center;
     font-size: 20px;
@@ -24,6 +28,11 @@ const US = styled.div`
       color: #fff;
       border-radius: 6px;
     }
+    &:nth-of-type(2) {
+      span {
+        font-size: 24px;
+      }
+    }
   }
   > img[alt="family"] {
     margin-bottom: 130px;
@@ -32,7 +41,7 @@ const US = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width: 80px;
+    width: 100px;
   }
 `;
 
@@ -55,8 +64,12 @@ const UseContact = () => {
   return (
     <US>
       <h2>
-        최신 인기 렌탈 가전 <br /> 합리적으로 이용하세요.
+        최신 인기 렌탈 가전 <br /> 합리적으로 이용하세요!
       </h2>
+      <h3>
+        생활 라이프 솔루션 가입시 <br />
+        5년간 렌탈지원금 최대 300만원 (상담필요)
+      </h3>
       <img src="/mark.png" alt="mark" />
       {boxData.map(
         (d: {
@@ -71,7 +84,7 @@ const UseContact = () => {
       <p>홈케어 닥터겸 담당매니저 준디</p>
       <p>
         약속은 생명이다 라는 좌우명을 가지고 <br />
-        친절 상담 방문하고 있습니다.
+        친절 상담 방문하고 있습니다.<span>😀</span>
       </p>
       <img src="/family.png" alt="family" />
     </US>

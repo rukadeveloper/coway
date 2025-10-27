@@ -79,7 +79,7 @@ const FreeButton = () => {
           setIsOpen((prev) => !prev);
         }}
       >
-        홈케어 1회 서비스
+        침대홈케어 1회 서비스
       </button>
       {isOpen && (
         <NewInput
