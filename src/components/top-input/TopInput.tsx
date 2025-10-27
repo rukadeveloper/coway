@@ -1,5 +1,4 @@
 import { useState } from "react";
-import axios from "axios";
 import styled from "styled-components";
 import EnterInput from "./EnterInput";
 import Agree from "./Agree";
@@ -92,24 +91,21 @@ const TopInput = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(
-        "https://sms-backend-omega.vercel.app/api/send-sms",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            to: "01044200593",
-            message: `이름은 ${name}입니다. 번호는 ${phone.phone1}${
-              phone.phone2
-            }${phone.phone3}입니다. 상품은 ${
-              combo_array[selectedDigital.index].split("/")[0] ===
-              selectedDigital.content
-                ? combo_array[selectedDigital.index].split("/")[1]
-                : ""
-            }이고, 예약 희망 요일은 ${dayReverse(selectedDay!)}입니다.`,
-          }),
-        }
-      );
+      await fetch("https://sms-backend-omega.vercel.app/api/send-sms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: "01044200593",
+          message: `이름은 ${name}입니다. 번호는 ${phone.phone1}${
+            phone.phone2
+          }${phone.phone3}입니다. 상품은 ${
+            combo_array[selectedDigital.index].split("/")[0] ===
+            selectedDigital.content
+              ? combo_array[selectedDigital.index].split("/")[1]
+              : ""
+          }이고, 예약 희망 요일은 ${dayReverse(selectedDay!)}입니다.`,
+        }),
+      });
 
       alert("문자가 전송되었습니다! 조금만 기다려주세요!");
     } catch (err) {
