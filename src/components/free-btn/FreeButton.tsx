@@ -87,7 +87,7 @@ const FreeButton = () => {
         `https://sms-backend-omega.vercel.app/api/send-sms`,
         {
           to: "01044200593",
-          message: `이름은 ${name}입니다. 번호는 ${phoneData.phoneOne}${
+          message: `이름은 ${nameData}입니다. 번호는 ${phoneData.phoneOne}${
             phoneData.phoneTwo
           }${phoneData.phoneThree}입니다. 상품은 ${
             combo_array[selectedDigital.index].split("/")[0] ===
@@ -97,7 +97,6 @@ const FreeButton = () => {
           }이고, 예약 희망 요일은 ${dayConvert(day!)}입니다.`,
         }
       );
-
       alert("문자가 전송되었습니다! 조금만 기다려주세요!");
     } catch (e) {
       alert("제출 중 오류가 발생했습니다!");

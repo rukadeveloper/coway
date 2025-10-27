@@ -3,7 +3,6 @@ import styled from "styled-components";
 import EnterInput from "./EnterInput";
 import Agree from "./Agree";
 import SelectDay from "./SelectDay";
-import axios from "axios";
 import { dayConvert } from "../../utils/dayConvert";
 
 const TopperInput = styled.div`

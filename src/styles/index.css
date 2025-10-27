@@ -48,6 +48,7 @@ body {
 
 #root {
   background-color: #333;
+  min-height: 100vh;
 }
 
 /* 링크 스타일 초기화 */
