@@ -1,19 +1,15 @@
+// server.js
 const express = require("express");
-const axios = require("axios");
-const cors = require("cors");
-const dotenv = require("dotenv");
 const crypto = require("crypto");
+const axios = require("axios");
+const cors = require("cors"); // 추가
+const dotenv = require("dotenv");
 
 dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
-
-// 환경 변수
-const API_KEY = process.env.SOLAPI_API_KEY;
-const API_SECRET = process.env.HMAC_SECRET;
-const FROM_NUMBER = process.env.SOLAPI_FROM_NUMBER;
+app.use(express.json()); // JSON 바디 파싱
+app.use(cors()); // 모든 도메인 허용
 
 // HMAC-SHA256 시그니처 생성
 function generateSignature(apiSecret, dateTime, salt) {
@@ -27,61 +23,52 @@ function createAuthHeader(apiKey, apiSecret) {
   const salt = crypto.randomBytes(16).toString("hex");
   const signature = generateSignature(apiSecret, dateTime, salt);
 
-  return {
-    header: `HMAC-SHA256 apiKey=${apiKey}, date=${dateTime}, salt=${salt}, signature=${signature}`,
-    dateTime,
-    salt,
-    signature,
-  };
+  return `HMAC-SHA256 apiKey=${apiKey}, date=${dateTime}, salt=${salt}, signature=${signature}`;
 }
 
-// SMS 발송 엔드포인트
-app.post("/api/send-sms", async (req, res) => {
-  const { to, text } = req.body;
-  if (!to || !text)
-    return res.status(400).json({ success: false, error: "to/text 필수" });
+// SMS 전송 라우트
+app.post("/send-sms", async (req, res) => {
+  const { to, message } = req.body;
+  const apiKey = process.env.SOLAPI_API_KEY; // 환경변수에 저장
+  const apiSecret = process.env.SOLAPI_SECRET_KEY; // 환경변수에 저장
+  const from = process.env.SOLAPI_FROM_NUMBER; // 승인된 발신번호
 
-  const urlPath = "/messages/v4/send-many/detail";
-  const body = { messages: [{ from: FROM_NUMBER, to, text, type: "LMS" }] };
+  const body = {
+    messages: [
+      {
+        to,
+        from,
+        text: message,
+        type: "LMS", // "SMS"나 "MMS"도 가능
+      },
+    ],
+  };
 
-  const auth = createAuthHeader(API_KEY, API_SECRET);
+  console.log(apiKey, apiSecret, from);
 
-  console.log("--- SMS 테스트 ---");
-  console.log({
-    dateTime: auth.dateTime,
-    salt: auth.salt,
-    body,
-    signature: auth.signature,
-  });
+  if (!to || !message) {
+    return res.status(400).json({ error: "to와 message는 필수입니다." });
+  }
+
+  const url = "https://api.solapi.com/messages/v4/send-many/detail"; // 실제 SMS API URL
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: createAuthHeader(apiKey, apiSecret),
+  };
 
   try {
-    const response = await axios.post(
-      `https://api.solapi.com${urlPath}`,
-      body,
-      {
-        headers: {
-          Authorization: auth.header,
-          "Content-Type": "application/json",
-        },
-      }
-    );
-
-    console.log("✅ 발송 결과:", response.data);
+    const response = await axios.post(url, body, { headers });
     res.json({ success: true, data: response.data });
-  } catch (err) {
-    console.error("❌ 발송 실패:", err.response?.data || err.message);
-    res
-      .status(500)
-      .json({ success: false, error: err.response?.data || err.message });
+  } catch (error) {
+    console.error(error.response ? error.response.data : error.message);
+    res.status(500).json({
+      success: false,
+      error: error.response ? error.response.data : error.message,
+    });
   }
 });
 
-// 서버 상태 확인
-app.get("/api/health", (_, res) => {
-  res.json({ status: "OK", timestamp: new Date().toISOString() });
-});
-
-// 서버 실행
-app.listen(3000, () =>
-  console.log("✅ Server running on http://localhost:3000")
+const PORT = 3000;
+app.listen(PORT, () =>
+  console.log(`SMS API 서버 실행 중: http://localhost:${PORT}`)
 );

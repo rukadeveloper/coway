@@ -92,35 +92,42 @@ const TopInput = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3000/api/send-sms", {
-        to: `${phone.phone1}${phone.phone2}${phone.phone3}`,
-        text: `${name} 님이 상담 신청을 하셨습니다. 전화번호는 ${phone.phone1}${
-          phone.phone2
-        }${phone.phone3}입니다. 상품은 ${
-          combo_array[selectedDigital.index].split("/")[1] ===
-          selectedDigital.content
-            ? combo_array[selectedDigital.index].split("/")[0]
-            : ""
-        }이고, 요일은 ${dayReverse(selectedDay!)}입니다`,
+      const res = await fetch(
+        "https://sms-backend-omega.vercel.app/api/send-sms",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            to: "01044200593",
+            message: `이름은 ${name}입니다. 번호는 ${phone.phone1}${
+              phone.phone2
+            }${phone.phone3}입니다. 상품은 ${
+              combo_array[selectedDigital.index].split("/")[0] ===
+              selectedDigital.content
+                ? combo_array[selectedDigital.index].split("/")[1]
+                : ""
+            }이고, 예약 희망 요일은 ${dayReverse(selectedDay!)}입니다.`,
+          }),
+        }
+      );
+
+      alert("문자가 전송되었습니다! 조금만 기다려주세요!");
+    } catch (err) {
+      alert("제출 중 오류가 발생했습니다.");
+    } finally {
+      setName("");
+      setPhone({
+        phone1: "",
+        phone2: "",
+        phone3: "",
       });
-
-      console.log("백엔드 응답:", response.data);
-
-      if (response.data.success) {
-        alert("상담 신청이 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.");
-        // 폼 초기화
-        setName("");
-        setPhone({ phone1: "", phone2: "", phone3: "" });
-        setSelectedDigital({ content: "coway", index: 0, isOpen: false });
-        setSelectedDay(null);
-        setAgreeChecked(false);
-      } else {
-        alert("상담 신청 중 오류가 발생했습니다. 다시 시도해주세요.");
-        console.error("SMS 전송 실패:", response.data);
-      }
-    } catch (error) {
-      alert("상담 신청 중 오류가 발생했습니다. 다시 시도해주세요.");
-      console.error("SMS 전송 오류:", error);
+      setSelectedDigital({
+        content: "coway",
+        index: 0,
+        isOpen: false,
+      });
+      setSelectedDay(null);
+      setAgreeChecked(false);
     }
   };
 
