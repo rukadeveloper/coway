@@ -7,7 +7,7 @@ import SelectDay from "../top-input/SelectDay";
 const NI = styled.div`
   width: 100%;
   max-width: 600px;
-  height: 550px;
+  height: 650px;
   background-image: linear-gradient(to bottom, #10a7e0 0%, #095b7a 100%);
   position: fixed;
   bottom: 0;
@@ -30,7 +30,7 @@ const NI = styled.div`
   }
 
   span.title {
-    font-size: 14px;
+    font-size: 17px;
     color: #fff;
     display: block;
     margin-bottom: 1.4rem;
@@ -38,7 +38,6 @@ const NI = styled.div`
     font-weight: 500;
 
     @media (max-width: 768px) {
-      font-size: 13px;
       margin-bottom: 1rem;
     }
   }
@@ -179,14 +178,9 @@ const NI = styled.div`
       }
 
       input[type="checkbox"] {
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
         accent-color: #10a7e0;
-
-        @media (max-width: 768px) {
-          width: 20px;
-          height: 20px;
-        }
       }
     }
   }

@@ -12,6 +12,10 @@ const AgreeCheck = styled.div`
     align-items: center;
     gap: 0.9rem;
     color: #fff;
+    input {
+      width: 24px;
+      height: 24px;
+    }
   }
   button {
     text-decoration: underline;
