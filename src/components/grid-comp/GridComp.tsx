@@ -103,7 +103,7 @@ const GridComp = () => {
     },
     {
       gridId: 2,
-      title: "공기청정기 + 공기 제습기",
+      title: "공기청정기 + 제습기",
       subTitle: "타사제품 보상할인 최대 25% 할인가 적용",
       imageUrl: "/air.png",
       isBest: true,
@@ -115,7 +115,7 @@ const GridComp = () => {
     },
     {
       gridId: 3,
-      title: "공기청정기 + 공기 제습기",
+      title: "공기청정기 + 제습기",
       subTitle: "타사제품 보상할인 최대 25% 할인가 적용",
       imageUrl: "/air4.png",
       isBest: false,
@@ -127,7 +127,7 @@ const GridComp = () => {
     },
     {
       gridId: 4,
-      title: "의류청정기",
+      title: "의류 청정기",
       subTitle: "스타일러 + 공기 청정기 + 제습기|(3종 멀티 기능)",
       imageUrl: "/cloth1.png",
       isBest: false,
@@ -139,7 +139,7 @@ const GridComp = () => {
     },
     {
       gridId: 5,
-      title: "의류청정기",
+      title: "의류 청정기",
       subTitle: "스타일러 + 공기 청정기 + 제습기|(3종 멀티 기능)",
       imageUrl: "/cloth4.png",
       isBest: false,
