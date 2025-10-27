@@ -80,14 +80,14 @@ const FreeButton = () => {
           !selectedDigital
         }
       >
-        상담 신청하기
+        침대홈케어 1회 서비스
       </button>
       <button
         onClick={() => {
           setIsOpen((prev) => !prev);
         }}
       >
-        침대홈케어 1회 서비스
+        상담 신청하기
       </button>
       {isOpen && (
         <NewInput
