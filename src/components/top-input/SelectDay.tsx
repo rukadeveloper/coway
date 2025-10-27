@@ -35,6 +35,9 @@ const SD = styled.div`
     }
     ul {
       width: 100%;
+      li {
+        flex: 1;
+      }
     }
   }
 `;
