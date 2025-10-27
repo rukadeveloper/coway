@@ -33,6 +33,9 @@ const SD = styled.div`
     span {
       margin-bottom: 10px;
     }
+    ul {
+      width: 100%;
+    }
   }
 `;
 
