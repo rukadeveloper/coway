@@ -3,6 +3,8 @@ import styled from "styled-components";
 import EnterInput from "./EnterInput";
 import Agree from "./Agree";
 import SelectDay from "./SelectDay";
+import axios from "axios";
+import { dayConvert } from "../../utils/dayConvert";
 
 const TopperInput = styled.div`
   width: 500px;
@@ -49,17 +51,6 @@ const TopInput = () => {
     index: 0,
     isOpen: false,
   });
-
-  const dayReverse = (day: number) => {
-    if (day === 0) return "일요일";
-    if (day === 1) return "월요일";
-    if (day === 2) return "화요일";
-    if (day === 3) return "수요일";
-    if (day === 4) return "목요일";
-    if (day === 5) return "금요일";
-    if (day === 6) return "토요일";
-  };
-
   const [name, setName] = useState("");
 
   const [phone, setPhone] = useState({
@@ -103,7 +94,7 @@ const TopInput = () => {
             selectedDigital.content
               ? combo_array[selectedDigital.index].split("/")[1]
               : ""
-          }이고, 예약 희망 요일은 ${dayReverse(selectedDay!)}입니다.`,
+          }이고, 예약 희망 요일은 ${dayConvert(selectedDay!)}입니다.`,
         }),
       });
 

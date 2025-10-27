@@ -199,6 +199,7 @@ const NewInput = ({
   setSelectedDigital,
   day,
   setDay,
+  combo_array,
 }: {
   nameData: string;
   phoneData: { phoneOne: string; phoneTwo: string; phoneThree: string };
@@ -214,6 +215,7 @@ const NewInput = ({
   >;
   day: number | null;
   setDay: Dispatch<SetStateAction<number | null>>;
+  combo_array: string[];
 }) => {
   return (
     <NI>
@@ -257,18 +259,7 @@ const NewInput = ({
           label="가전제품"
           type="combo_box"
           forId="comboId"
-          combo_array={[
-            "정수기_32종 상담/coway",
-            "업소용 정수기/coway_company",
-            "얼음 정수기/coway_ice",
-            "침대 매트리스/matrix",
-            "공기청정기/air",
-            "의류 청정기/cloth",
-            "비데/vide",
-            "연수기/yeonsoo",
-            "인덕션/induction",
-            "안마의자_베드/chair",
-          ]}
+          combo_array={combo_array}
           state={selectedDigital}
           setState={setSelectedDigital}
           isUp

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import NewInput from "./NewInput";
 import { useState } from "react";
+import axios from "axios";
+import { dayConvert } from "../../utils/dayConvert";
 
 const FB = styled.div`
   width: 100%;
@@ -32,6 +34,18 @@ const FB = styled.div`
 `;
 
 const FreeButton = () => {
+  const combo_array = [
+    "정수기_32종 상담/coway",
+    "업소용 정수기/coway_company",
+    "얼음 정수기/coway_ice",
+    "침대 매트리스/matrix",
+    "공기청정기/air",
+    "의류 청정기/cloth",
+    "비데/vide",
+    "연수기/yeonsoo",
+    "인덕션/induction",
+    "안마의자_베드/chair",
+  ];
   const [selectedDigital, setSelectedDigital] = useState({
     content: "coway",
     index: 0,
@@ -67,6 +81,29 @@ const FreeButton = () => {
     setIsAgreed(e.target.checked);
   };
 
+  const sendSMS = async () => {
+    try {
+      const res = await axios.post(
+        `https://sms-backend-omega.vercel.app/api/send-sms`,
+        {
+          to: "01044200593",
+          message: `이름은 ${name}입니다. 번호는 ${phoneData.phoneOne}${
+            phoneData.phoneTwo
+          }${phoneData.phoneThree}입니다. 상품은 ${
+            combo_array[selectedDigital.index].split("/")[0] ===
+            selectedDigital.content
+              ? combo_array[selectedDigital.index].split("/")[1]
+              : ""
+          }이고, 예약 희망 요일은 ${dayConvert(day!)}입니다.`,
+        }
+      );
+
+      alert("문자가 전송되었습니다! 조금만 기다려주세요!");
+    } catch (e) {
+      alert("제출 중 오류가 발생했습니다!");
+    }
+  };
+
   return (
     <FB>
       <button
@@ -79,6 +116,7 @@ const FreeButton = () => {
           !day ||
           !selectedDigital
         }
+        onClick={sendSMS}
       >
         침대홈케어 1회 서비스
       </button>
@@ -103,6 +141,7 @@ const FreeButton = () => {
           setSelectedDigital={setSelectedDigital}
           day={day}
           setDay={setDay}
+          combo_array={combo_array}
         />
       )}
     </FB>
