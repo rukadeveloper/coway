@@ -36,7 +36,7 @@ const Combo = styled.div`
     }
     button {
       text-align: left;
-      padding: 10px 16px;
+      padding: 3px 9px;
       &:hover {
         background-color: black;
         color: #fff;

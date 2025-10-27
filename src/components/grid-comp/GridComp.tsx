@@ -78,7 +78,8 @@ const GridComp = () => {
     {
       gridId: 0,
       title: "침대 ~ 매트리스 렌탈 시 ~ 4개월마다 홈케어 서비스",
-      subTitle: "동시구매 15%할인 + 반값할인 + 재렌탈 할인 최대 20%",
+      subTitle:
+        "코웨이만의 탑퍼 교체 서비스|동시구매 15%할인 + 반값할인 + 재렌탈 할인 최대 20%",
       imageUrl: "/thumb-ss1_280x280.png",
       isBest: false,
       isPackage: false,
@@ -90,7 +91,8 @@ const GridComp = () => {
     {
       gridId: 1,
       title: "침대 ~ 매트리스 렌탈 시 ~ 4개월마다 홈케어 서비스",
-      subTitle: "동시구매 15%할인 + 반값할인 + 재렌탈 할인 최대 20%",
+      subTitle:
+        "코웨이만의 탑퍼 교체 서비스|동시구매 15%할인 + 반값할인 + 재렌탈 할인 최대 20%",
       imageUrl: "/matrix4.png",
       isBest: false,
       isPackage: true,
@@ -125,8 +127,8 @@ const GridComp = () => {
     },
     {
       gridId: 4,
-      title: "공기청정기 + 공기 제습기",
-      subTitle: "타사제품 보상할인 최대 25% 할인가 적용",
+      title: "의류청정기",
+      subTitle: "스타일러 + 공기 청정기 + 제습기|(3종 멀티 기능)",
       imageUrl: "/cloth1.png",
       isBest: false,
       isPackage: false,
@@ -137,8 +139,8 @@ const GridComp = () => {
     },
     {
       gridId: 5,
-      title: "공기청정기 + 공기 제습기",
-      subTitle: "타사제품 보상할인 최대 25% 할인가 적용",
+      title: "의류청정기",
+      subTitle: "스타일러 + 공기 청정기 + 제습기|(3종 멀티 기능)",
       imageUrl: "/cloth4.png",
       isBest: false,
       isPackage: false,

@@ -1,6 +1,7 @@
+import { useState } from "react";
+import axios from "axios";
 import styled from "styled-components";
 import EnterInput from "./EnterInput";
-import { useState } from "react";
 import Agree from "./Agree";
 import SelectDay from "./SelectDay";
 
@@ -50,6 +51,16 @@ const TopInput = () => {
     isOpen: false,
   });
 
+  const dayReverse = (day: number) => {
+    if (day === 0) return "일요일";
+    if (day === 1) return "월요일";
+    if (day === 2) return "화요일";
+    if (day === 3) return "수요일";
+    if (day === 4) return "목요일";
+    if (day === 5) return "금요일";
+    if (day === 6) return "토요일";
+  };
+
   const [name, setName] = useState("");
 
   const [phone, setPhone] = useState({
@@ -64,8 +75,53 @@ const TopInput = () => {
 
   const disabled = !selectedDigital || !name || !phone || !agreeChecked;
 
+  const combo_array = [
+    "정수기_32종 상담/coway",
+    "업소용 정수기/coway_company",
+    "얼음 정수기/coway_ice",
+    "침대 매트리스/matrix",
+    "공기청정기/air",
+    "의류 청정기/cloth",
+    "비데/vide",
+    "연수기/yeonsoo",
+    "인덕션/induction",
+    "안마의자_베드/chair",
+  ];
+
   const kakaoConsult = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    try {
+      const response = await axios.post("http://localhost:3000/api/send-sms", {
+        to: `${phone.phone1}${phone.phone2}${phone.phone3}`,
+        text: `${name} 님이 상담 신청을 하셨습니다. 전화번호는 ${phone.phone1}${
+          phone.phone2
+        }${phone.phone3}입니다. 상품은 ${
+          combo_array[selectedDigital.index].split("/")[1] ===
+          selectedDigital.content
+            ? combo_array[selectedDigital.index].split("/")[0]
+            : ""
+        }이고, 요일은 ${dayReverse(selectedDay!)}입니다`,
+      });
+
+      console.log("백엔드 응답:", response.data);
+
+      if (response.data.success) {
+        alert("상담 신청이 완료되었습니다! 빠른 시일 내에 연락드리겠습니다.");
+        // 폼 초기화
+        setName("");
+        setPhone({ phone1: "", phone2: "", phone3: "" });
+        setSelectedDigital({ content: "coway", index: 0, isOpen: false });
+        setSelectedDay(null);
+        setAgreeChecked(false);
+      } else {
+        alert("상담 신청 중 오류가 발생했습니다. 다시 시도해주세요.");
+        console.error("SMS 전송 실패:", response.data);
+      }
+    } catch (error) {
+      alert("상담 신청 중 오류가 발생했습니다. 다시 시도해주세요.");
+      console.error("SMS 전송 오류:", error);
+    }
   };
 
   return (
@@ -91,18 +147,7 @@ const TopInput = () => {
           label="가전제품"
           type="combo_box"
           forId="comboId"
-          combo_array={[
-            "정수기_32종 상담/coway",
-            "업소용 정수기/coway_company",
-            "얼음 정수기/coway_ice",
-            "침대 매트리스/matrix",
-            "공기청정기/air",
-            "의류 청정기/cloth",
-            "비데/vide",
-            "연수기/yeonsoo",
-            "인덕션/induction",
-            "안마의자/chair",
-          ]}
+          combo_array={combo_array}
           state={selectedDigital}
           setState={setSelectedDigital}
         />

@@ -1,26 +1,25 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "backend",
+  "type": "commonjs",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rukadeveloper/coway-danguen-back.git"
   },
-  "keywords": [
-    "backend"
-  ],
-  "author": "haruka",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rukadeveloper/coway-danguen-back/issues"
   },
   "homepage": "https://github.com/rukadeveloper/coway-danguen-back#readme",
+  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0"
   }
 }

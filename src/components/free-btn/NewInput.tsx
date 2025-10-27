@@ -267,7 +267,7 @@ const NewInput = ({
             "비데/vide",
             "연수기/yeonsoo",
             "인덕션/induction",
-            "안마의자/chair",
+            "안마의자_베드/chair",
           ]}
           state={selectedDigital}
           setState={setSelectedDigital}
