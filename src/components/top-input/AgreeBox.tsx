@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 const AgreesBox = styled.div`
   width: 100%;
-  height: 70px;
+  height: 80px;
   background-color: #fff;
   padding: 0.67rem;
   margin-top: 1rem;
   border-radius: 10px;
   p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.9;
     margin-bottom: 1rem;
   }

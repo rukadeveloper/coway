@@ -13,7 +13,7 @@ const VC = styled.div`
 const VideoComp = () => {
   return (
     <VC>
-      <video autoPlay muted loop>
+      <video autoPlay muted loop playsInline>
         <source src={"/video.mp4"} type="video/mp4" />
       </video>
     </VC>

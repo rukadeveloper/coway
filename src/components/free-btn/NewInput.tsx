@@ -255,7 +255,7 @@ const NewInput = ({
           * 신용불량자는 렌탈이 제한되며,일시불로 구매 가능합니다!
         </span>
         <div className="nameId">
-          <label htmlFor="nameId">성함</label>
+          <label htmlFor="nameId">이름</label>
           <input
             type="text"
             value={nameData}
@@ -264,7 +264,7 @@ const NewInput = ({
           />
         </div>
         <div className="phoneId">
-          <label htmlFor="phoneId1">전화번호</label>
+          <label htmlFor="phoneId1">폰번호</label>
           <div className="phone-group">
             <input
               type="text"

@@ -73,14 +73,14 @@ const TopInput = () => {
       <form onSubmit={kakaoConsult}>
         <h1>신용불량자는 렌탈이 제한됩니다.</h1>
         <EnterInput
-          label="성함"
+          label="이름"
           type="text"
           forId="nameId"
           inputState={name}
           setInputState={setName}
         />
         <EnterInput
-          label="전화번호"
+          label="폰번호"
           type="text"
           forId="phoneId"
           isLength
@@ -88,7 +88,7 @@ const TopInput = () => {
           setPhoneState={setPhone}
         />
         <EnterInput
-          label="전자제품"
+          label="가전제품"
           type="combo_box"
           forId="comboId"
           combo_array={[

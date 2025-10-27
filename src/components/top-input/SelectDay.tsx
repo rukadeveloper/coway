@@ -45,7 +45,7 @@ const SelectDay = ({
 }) => {
   return (
     <SD>
-      <span>요일 선택</span>
+      <span>상담요일 선택</span>
       <ul>
         <li>
           <button
