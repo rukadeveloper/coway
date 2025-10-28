@@ -59,7 +59,7 @@ const NI = styled.div`
       background-color: #fff;
       border-radius: 8px;
       border: none;
-      font-size: 14px;
+      font-size: 16px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
       @media (max-width: 768px) {
@@ -138,7 +138,7 @@ const NI = styled.div`
         background-color: #fff;
         border-radius: 8px;
         border: none;
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         min-width: 0;

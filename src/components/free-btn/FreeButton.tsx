@@ -67,15 +67,24 @@ const FreeButton = () => {
   };
 
   const handlePhone1 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoneData((prev) => ({ ...prev, phoneOne: e.target.value }));
+    setPhoneData((prev) => ({
+      ...prev,
+      phoneOne: e.target.value.trim().slice(0, 3),
+    }));
   };
 
   const handlePhone2 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoneData((prev) => ({ ...prev, phoneTwo: e.target.value }));
+    setPhoneData((prev) => ({
+      ...prev,
+      phoneTwo: e.target.value.trim().slice(0, 4),
+    }));
   };
 
   const handlePhone3 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhoneData((prev) => ({ ...prev, phoneThree: e.target.value }));
+    setPhoneData((prev) => ({
+      ...prev,
+      phoneThree: e.target.value.trim().slice(0, 4),
+    }));
   };
 
   const handleAgree = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -132,7 +141,7 @@ const FreeButton = () => {
         }
         onClick={sendSMS}
       >
-        침대홈케어 1회 서비스
+        침대홈케어1회 서비스
       </button>
       <button
         onClick={() => {
