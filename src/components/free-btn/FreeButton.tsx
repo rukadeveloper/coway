@@ -102,6 +102,19 @@ const FreeButton = () => {
       alert("문자가 전송되었습니다! 조금만 기다려주세요!");
     } catch (e) {
       alert("제출 중 오류가 발생했습니다!");
+    } finally {
+      setNameData("");
+      setPhoneData({
+        phoneOne: "",
+        phoneTwo: "",
+        phoneThree: "",
+      });
+      setSelectedDigital({
+        content: "coway",
+        index: 0,
+        isOpen: false,
+      });
+      setDay(null);
     }
   };
 

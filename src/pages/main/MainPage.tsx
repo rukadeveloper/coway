@@ -11,6 +11,7 @@ import TopInput from "../../components/top-input/TopInput";
 import UseContact from "../../components/use/UseContact";
 import VideoComp from "../../components/video-comp/VideoComp";
 import ZehuCard from "../../components/zehu-card/ZehuCard";
+import CallButton from "../../components/call-btn/CallButton";
 
 const MainWrapper = styled.div`
   display: flex;
@@ -36,6 +37,7 @@ const MainPage = () => {
       <GridComp />
       <UseContact />
       <FreeButton />
+      <CallButton />
     </MainWrapper>
   );
 };

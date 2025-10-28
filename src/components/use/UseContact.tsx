@@ -35,7 +35,7 @@ const US = styled.div`
     }
   }
   > img[alt="family"] {
-    margin-bottom: 130px;
+    margin-bottom: 220px;
   }
   > img[alt="mark"] {
     position: absolute;
