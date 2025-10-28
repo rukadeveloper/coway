@@ -98,6 +98,7 @@ const FreeButton = () => {
           }이고, 예약 희망 요일은 ${dayConvert(day!)}입니다.`,
         }
       );
+      console.log(res);
       alert("문자가 전송되었습니다! 조금만 기다려주세요!");
     } catch (e) {
       alert("제출 중 오류가 발생했습니다!");
