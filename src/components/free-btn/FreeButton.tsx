@@ -20,7 +20,7 @@ const FB = styled.div`
     bottom: 0;
     z-index: 2000001;
     &:nth-of-type(1) {
-      bottom: 56px;
+      bottom: 60px;
     }
     &:disabled {
       &::after {
@@ -28,6 +28,7 @@ const FB = styled.div`
         position: absolute;
         inset: 0;
         background-color: rgba(0, 0, 0, 0.45);
+        border-radius: 6px 6px 0 0;
       }
     }
   }
@@ -90,9 +91,9 @@ const FreeButton = () => {
           message: `이름은 ${nameData}입니다. 번호는 ${phoneData.phoneOne}${
             phoneData.phoneTwo
           }${phoneData.phoneThree}입니다. 상품은 ${
-            combo_array[selectedDigital.index].split("/")[0] ===
+            combo_array[selectedDigital.index].split("/")[1] ===
             selectedDigital.content
-              ? combo_array[selectedDigital.index].split("/")[1]
+              ? combo_array[selectedDigital.index].split("/")[0]
               : ""
           }이고, 예약 희망 요일은 ${dayConvert(day!)}입니다.`,
         }

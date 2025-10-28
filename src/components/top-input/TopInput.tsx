@@ -89,9 +89,9 @@ const TopInput = () => {
           message: `이름은 ${name}입니다. 번호는 ${phone.phone1}${
             phone.phone2
           }${phone.phone3}입니다. 상품은 ${
-            combo_array[selectedDigital.index].split("/")[0] ===
+            combo_array[selectedDigital.index].split("/")[1] ===
             selectedDigital.content
-              ? combo_array[selectedDigital.index].split("/")[1]
+              ? combo_array[selectedDigital.index].split("/")[0]
               : ""
           }이고, 예약 희망 요일은 ${dayConvert(selectedDay!)}입니다.`,
         }),
