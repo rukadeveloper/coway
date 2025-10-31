@@ -85,7 +85,7 @@ const TopInput = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          to: "01044200593",
+          to: "01082420593",
           message: `이름은 ${name}입니다. 번호는 ${phone.phone1}${
             phone.phone2
           }${phone.phone3}입니다. 상품은 ${
