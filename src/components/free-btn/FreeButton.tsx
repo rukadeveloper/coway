@@ -141,6 +141,13 @@ const FreeButton = () => {
   return (
     <FB>
       <button
+        onClick={() => {
+          setIsOpen((prev) => !prev);
+        }}
+      >
+        상담 신청하기
+      </button>
+      <button
         disabled={
           !nameData ||
           !phoneData.phoneOne ||
@@ -153,13 +160,6 @@ const FreeButton = () => {
         onClick={sendSMS}
       >
         침대홈케어1회 서비스
-      </button>
-      <button
-        onClick={() => {
-          setIsOpen((prev) => !prev);
-        }}
-      >
-        상담 신청하기
       </button>
       {isOpen && (
         <NewInput
