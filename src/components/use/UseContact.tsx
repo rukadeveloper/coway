@@ -68,7 +68,8 @@ const UseContact = () => {
       </h2>
       <h3>
         생활 라이프 솔루션 가입시 <br />
-        5년간 렌탈지원금 할인혜택을 드립니다! (적금상조)
+        5년간 렌탈지원금 할인혜택을 드립니다! <br />
+        (적금상조)
       </h3>
       <img src="/mark.png" alt="mark" />
       {boxData.map(
