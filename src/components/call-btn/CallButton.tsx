@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const CBN = styled.div`
   position: fixed;
-  top: 50px;
+  top: 80px;
   right: 15%;
   z-index: 100000000;
   a {
