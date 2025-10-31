@@ -127,6 +127,17 @@ const FreeButton = () => {
     }
   };
 
+  console.log(
+    "nameData:" +
+      nameData +
+      "phoneData : " +
+      phoneData +
+      "isAgreed : " +
+      isAgreed +
+      "day : " +
+      day
+  );
+
   return (
     <FB>
       <button
@@ -136,7 +147,7 @@ const FreeButton = () => {
           !phoneData.phoneTwo ||
           !phoneData.phoneThree ||
           !isAgreed ||
-          !day ||
+          day === null ||
           !selectedDigital
         }
         onClick={sendSMS}
