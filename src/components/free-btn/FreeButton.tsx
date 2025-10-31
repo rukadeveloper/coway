@@ -145,7 +145,7 @@ const FreeButton = () => {
           setIsOpen((prev) => !prev);
         }}
       >
-        상담 신청하기
+        침대홈케어1회 서비스
       </button>
       <button
         disabled={
@@ -159,7 +159,7 @@ const FreeButton = () => {
         }
         onClick={sendSMS}
       >
-        침대홈케어1회 서비스
+        상담신청하기
       </button>
       {isOpen && (
         <NewInput
