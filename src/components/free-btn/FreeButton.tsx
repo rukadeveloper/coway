@@ -96,7 +96,7 @@ const FreeButton = () => {
       const res = await axios.post(
         `https://sms-backend-omega.vercel.app/api/send-sms`,
         {
-          to: "01044200593",
+          to: "01082420593",
           message: `이름은 ${nameData}입니다. 번호는 ${phoneData.phoneOne}${
             phoneData.phoneTwo
           }${phoneData.phoneThree}입니다. 상품은 ${
