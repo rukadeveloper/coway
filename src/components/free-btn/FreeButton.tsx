@@ -20,7 +20,7 @@ const FB = styled.div`
     bottom: 0;
     z-index: 2000001;
     &:nth-of-type(1) {
-      bottom: 60px;
+      bottom: 56px;
     }
     &:disabled {
       &::after {

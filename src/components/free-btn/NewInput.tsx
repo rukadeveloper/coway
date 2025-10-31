@@ -145,7 +145,7 @@ const NI = styled.div`
 
         @media (max-width: 768px) {
           padding: 12px 4px;
-          font-size: 14px;
+          font-size: 16px;
           min-width: 0;
         }
 

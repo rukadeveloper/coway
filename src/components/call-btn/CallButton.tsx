@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const CBN = styled.div`
   position: fixed;
-  bottom: 130px;
+  top: 50px;
+  left: 15%;
   z-index: 100000000;
   a {
     width: 80px;
@@ -26,7 +27,7 @@ const CBN = styled.div`
 const CallButton = () => {
   return (
     <CBN>
-      <a href={`tel:01057600593`}>
+      <a href={`tel:01057900593`}>
         <img src="/call.png" alt="call" width={50} />
       </a>
     </CBN>
