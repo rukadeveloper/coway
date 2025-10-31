@@ -5,6 +5,9 @@ const US = styled.div`
   width: 80%;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h2 {
     font-size: 26px;
     text-align: left;
@@ -35,7 +38,8 @@ const US = styled.div`
     }
   }
   > img[alt="family"] {
-    margin-bottom: 220px;
+    margin-bottom: 150px;
+    max-width: 130%;
   }
   > img[alt="mark"] {
     position: absolute;

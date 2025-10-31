@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const CBN = styled.div`
   position: fixed;
-  top: 60px;
-  right: 0;
+  top: 113px;
+  right: 4%;
   z-index: 100000000;
   a {
     width: 80px;
