@@ -10,7 +10,7 @@ const US = styled.div`
   align-items: center;
   h2 {
     font-size: 26px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 30px;
     @media screen and (max-width: 460px) {
       font-size: 20px;
@@ -19,6 +19,7 @@ const US = styled.div`
   h3 {
     font-size: 17px;
     margin-bottom: 30px;
+    text-align: center;
   }
   > p {
     text-align: center;
@@ -45,7 +46,12 @@ const US = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width: 100px;
+    width: 80px;
+    @media screen and (max-width: 510px) {
+      width: 60px;
+      position: relative;
+      margin-bottom: 30px;
+    }
   }
 `;
 

@@ -19,6 +19,7 @@ const MainWrapper = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 600px;
+  overflow-x: hidden;
   margin: 0 auto;
   background-color: #fff;
 `;
