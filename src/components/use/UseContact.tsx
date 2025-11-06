@@ -16,10 +16,9 @@ const US = styled.div`
       font-size: 20px;
     }
   }
-  h3 {
-    font-size: 17px;
+  video {
+    display: block;
     margin-bottom: 30px;
-    text-align: center;
   }
   > p {
     text-align: center;
@@ -37,6 +36,12 @@ const US = styled.div`
         font-size: 24px;
       }
     }
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      @media screen and (max-width: 400px) {
+        font-size: 17px;
+      }
+    }
   }
   > img[alt="family"] {
     margin-bottom: 150px;
@@ -46,9 +51,8 @@ const US = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width: 80px;
-    @media screen and (max-width: 510px) {
-      width: 60px;
+    width: 100px;
+    @media screen and (max-width: 560px) {
       position: relative;
       margin-bottom: 30px;
     }
@@ -76,12 +80,10 @@ const UseContact = () => {
       <h2>
         최신 인기 렌탈 가전 <br /> 합리적으로 이용하세요!
       </h2>
-      <h3>
-        생활 라이프 솔루션 가입시 <br />
-        5년간 렌탈지원금 할인혜택을 드립니다! <br />
-        (적금상조)
-      </h3>
-      <img src="/mark.png" alt="mark" />
+      <img src="/mark2.png" alt="mark" />
+      <video autoPlay muted loop playsInline>
+        <source src="/44seconds.mp4" type="video/mp4" />
+      </video>
       {boxData.map(
         (d: {
           number: number;
@@ -89,13 +91,13 @@ const UseContact = () => {
           content: string;
           buContent: string;
         }) => (
-          <UseBox data={d} />
+          <UseBox data={d} key={d.number} />
         )
       )}
       <p>홈케어 닥터겸 담당매니저 준디</p>
       <p>직통 010-5790-0593</p>
       <p>
-        약속은 생명이다 라는 좌우명을 가지고 <br />
+        약속은 생명이다 라는 생활의 좌우명을 가지고 <br />
         친절 상담 방문하고 있습니다.<span>😄</span>
       </p>
       <img src="/family.png" alt="family" />
