@@ -24,6 +24,7 @@ const US = styled.div`
     font-size: 20px;
     margin-bottom: 20px;
     font-weight: 700;
+    width: 100%;
     &:nth-of-type(1) {
       padding: 6px;
       background-color: #000;
