@@ -20,7 +20,6 @@ const VideoComp = () => {
       <video autoPlay muted loop playsInline>
         <source src={"/video.mp4"} type="video/mp4" />
       </video>
-      <img src="/care_service.jpeg" alt="care_service" />
     </VC>
   );
 };

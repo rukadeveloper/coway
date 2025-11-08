@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import UseBox from "./UseBox";
 
 const US = styled.div`
   width: 80%;
@@ -30,16 +29,20 @@ const US = styled.div`
       background-color: #000;
       color: #fff;
       border-radius: 6px;
+      font-size: 18px;
     }
     &:nth-of-type(2) {
       span {
         font-size: 24px;
       }
     }
+    &:nth-of-type(3) {
+      line-height: 1.8;
+    }
     &:nth-of-type(2),
     &:nth-of-type(3) {
       @media screen and (max-width: 400px) {
-        font-size: 17px;
+        font-size: 15px;
       }
     }
   }
@@ -51,7 +54,7 @@ const US = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width: 100px;
+    width: 120px;
     @media screen and (max-width: 560px) {
       position: relative;
       margin-bottom: 30px;
@@ -80,12 +83,12 @@ const UseContact = () => {
       {/* <h2>
         최신 인기 렌탈 가전 <br /> 합리적으로 이용하세요!
       </h2> */}
-      <img src="/mark2.png" alt="mark" />
+      <img src="/mark.png" alt="mark" />
       <h2>코웨이 갤러리 매장</h2>
       <video autoPlay muted loop playsInline>
         <source src="/44seconds.mp4" type="video/mp4" />
       </video>
-      {boxData.map(
+      {/* {boxData.map(
         (d: {
           number: number;
           title: string;
@@ -94,11 +97,12 @@ const UseContact = () => {
         }) => (
           <UseBox data={d} key={d.number} />
         )
-      )}
+      )} */}
       <p>홈케어 닥터겸 상담 매니저 준디</p>
       <p>직통 010-5790-0593</p>
       <p>
-        약속은 생명이다 라는 생활의 좌우명을 가지고 <br />
+        약속은 생명이다 라는
+        <br /> 생활의 좌우명을 가지고 <br />
         친절 상담 방문하고 있습니다.<span>😄</span>
       </p>
       <img src="/family.png" alt="family" />

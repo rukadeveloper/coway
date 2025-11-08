@@ -10,6 +10,9 @@ const GC = styled.div`
     font-size: 26px;
     text-align: center;
   }
+  img {
+    margin-top: 30px;
+  }
   @media screen and (max-width: 530px) {
     h2 {
       font-size: 20px;
@@ -259,6 +262,7 @@ const GridComp = () => {
 
   return (
     <GC>
+      <img src="/care_service.jpeg" alt="care_service" />
       <h2>베스트 제품을 확인하세요!</h2>
       <GCG>
         <div className="wrapper">
