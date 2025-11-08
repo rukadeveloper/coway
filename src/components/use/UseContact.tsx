@@ -42,7 +42,7 @@ const US = styled.div`
     &:nth-of-type(2),
     &:nth-of-type(3) {
       @media screen and (max-width: 400px) {
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }
