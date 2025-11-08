@@ -77,10 +77,11 @@ const UseContact = () => {
 
   return (
     <US>
-      <h2>
+      {/* <h2>
         최신 인기 렌탈 가전 <br /> 합리적으로 이용하세요!
-      </h2>
+      </h2> */}
       <img src="/mark2.png" alt="mark" />
+      <h2>코웨이 갤러리 매장</h2>
       <video autoPlay muted loop playsInline>
         <source src="/44seconds.mp4" type="video/mp4" />
       </video>
@@ -94,7 +95,7 @@ const UseContact = () => {
           <UseBox data={d} key={d.number} />
         )
       )}
-      <p>홈케어 닥터겸 담당매니저 준디</p>
+      <p>홈케어 닥터겸 상담 매니저 준디</p>
       <p>직통 010-5790-0593</p>
       <p>
         약속은 생명이다 라는 생활의 좌우명을 가지고 <br />
