@@ -63,21 +63,6 @@ const US = styled.div`
 `;
 
 const UseContact = () => {
-  const boxData = [
-    {
-      number: 1,
-      title: "CowayLife 499",
-      content: "부담없는 요금으로 가볍게 렌탈",
-      buContent: "일반 상조|렌탈지원금 80만원",
-    },
-    {
-      number: 2,
-      title: "CowayLife 599",
-      content: "더 강력해진 렌탈 혜택 찬스",
-      buContent: "프리미엄 상조 + 렌탈지원금 100만원",
-    },
-  ];
-
   return (
     <US>
       {/* <h2>
@@ -88,16 +73,6 @@ const UseContact = () => {
       <video autoPlay muted loop playsInline>
         <source src="/44seconds.mp4" type="video/mp4" />
       </video>
-      {/* {boxData.map(
-        (d: {
-          number: number;
-          title: string;
-          content: string;
-          buContent: string;
-        }) => (
-          <UseBox data={d} key={d.number} />
-        )
-      )} */}
       <p>홈케어 닥터겸 상담 매니저 준디</p>
       <p>직통 010-5790-0593</p>
       <p>
