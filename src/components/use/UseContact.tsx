@@ -34,6 +34,7 @@ const US = styled.div`
     &:nth-of-type(3) {
       span {
         font-size: 30px;
+        display: block;
       }
     }
     &:nth-of-type(3) {
