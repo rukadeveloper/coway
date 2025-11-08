@@ -31,9 +31,9 @@ const US = styled.div`
       border-radius: 6px;
       font-size: 18px;
     }
-    &:nth-of-type(4) {
+    &:nth-of-type(3) {
       span {
-        font-size: 24px;
+        font-size: 30px;
       }
     }
     &:nth-of-type(3) {
