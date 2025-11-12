@@ -16,7 +16,7 @@ const MainLogo = () => {
   return (
     <ML style={{ marginBottom: "20px" }}>
       <img src={"/coway_logo.png"} alt="logo" width={240} />
-      <h2>코웨이 정수기</h2>
+      <h2>코웨이</h2>
     </ML>
   );
 };
