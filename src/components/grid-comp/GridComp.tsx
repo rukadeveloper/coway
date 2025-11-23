@@ -13,6 +13,17 @@ const GC = styled.div`
   img {
     margin-top: 30px;
   }
+  #video-container {
+    h2 {
+      font-size: 19px;
+      background-color: #000;
+      color: #fff;
+      padding: 8px;
+    }
+    video {
+      margin-top: 20px;
+    }
+  }
   @media screen and (max-width: 530px) {
     h2 {
       font-size: 20px;
@@ -172,7 +183,7 @@ const GridComp = () => {
       isBest: false,
       isPackage: false,
       sale: null,
-      productName: "사계절 의류 청정기 더블케어",
+      productName: "프라임 & 스스로 케어 비데 패키지",
       buy: "1530000|1377000",
       rental: "45800|32980",
     },
@@ -263,7 +274,17 @@ const GridComp = () => {
   return (
     <GC>
       <img src="/care_service.jpeg" alt="care_service" />
-      <h2>베스트 제품을 확인하세요!</h2>
+      <div id="video-container">
+        <h2>
+          방안에 맞는 맞춤 스타일로..
+          <br /> 침대높이 매트리스 경도
+          <br /> 다양한 디자인 방문상담해 드립니다!
+        </h2>
+        <video autoPlay muted loop playsInline>
+          <source src={"/market_video(1).mp4"} type="video/mp4" />
+        </video>
+      </div>
+      <h2>코웨이 생활가전제품</h2>
       <GCG>
         <div className="wrapper">
           {Object.entries(groupedByTitle).map(([title, items], index) => {

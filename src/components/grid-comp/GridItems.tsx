@@ -85,7 +85,7 @@ const GridItem = styled.div`
     h3 {
       text-align: center;
       padding-top: 30px;
-      font-size: 22px;
+      font-size: 19px;
       margin-bottom: 50px;
     }
     .price-info-wrapper1 {

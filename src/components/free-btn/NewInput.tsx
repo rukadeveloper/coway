@@ -256,7 +256,7 @@ const NewInput = ({
           </div>
         </div>
         <EnterInput
-          label="가전제품"
+          label="생활제품"
           type="combo_box"
           forId="comboId"
           combo_array={combo_array}
