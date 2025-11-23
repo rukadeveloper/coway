@@ -22,6 +22,8 @@ const GC = styled.div`
     }
     video {
       margin-top: 20px;
+      width: 100%;
+      object-fit: cover;
     }
   }
   @media screen and (max-width: 530px) {
@@ -281,7 +283,7 @@ const GridComp = () => {
           <br /> 다양한 디자인 방문상담해 드립니다!
         </h2>
         <video autoPlay muted loop playsInline>
-          <source src={"/market_video(1).mp4"} type="video/mp4" />
+          <source src={"/market_video.mp4"} type="video/mp4" />
         </video>
       </div>
       <h2>코웨이 생활가전제품</h2>
