@@ -109,7 +109,7 @@ const ZehuCard = () => {
           최대 <b>월 3만원</b>의 청구 할인 혜택 <br />
           <strong>제휴카드 이용시 정수기 월 1,900원 부터~</strong>
         </span>
-        <span>제휴카드 이용시 무료 렌탈</span>
+        <span>제휴카드 이용시 무료렌탈</span>
       </p>
       <img src={"/card.png"} alt="card" />
     </ZC>

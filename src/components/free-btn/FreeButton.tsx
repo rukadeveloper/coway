@@ -146,7 +146,7 @@ const FreeButton = () => {
           setIsOpen((prev) => !prev);
         }}
       >
-        침대홈케어1회 서비스
+        제휴카드 이용 시 무료렌탈
       </button>
       <button
         disabled={

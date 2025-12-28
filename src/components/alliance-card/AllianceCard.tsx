@@ -189,7 +189,7 @@ const AllianceCard = () => {
           </div>
         ))}
       </div>
-      <div className="bottom-banner">무료렌탈 + 홈케어 서비스까지!!</div>
+      <div className="bottom-banner">무료렌탈 기간 홈케어 서비스까지!!</div>
     </AC>
   );
 };
