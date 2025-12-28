@@ -49,7 +49,7 @@ const US = styled.div`
     }
   }
   > img[alt="family"] {
-    margin-bottom: 150px;
+    margin-bottom: 30px;
     max-width: 130%;
   }
   > img[alt="mark"] {

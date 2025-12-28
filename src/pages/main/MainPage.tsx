@@ -6,8 +6,8 @@ import MainLogo from "../../components/logo/MainLogo";
 import Matrix from "../../components/matrix/Matrix";
 import TopInput from "../../components/top-input/TopInput";
 import UseContact from "../../components/use/UseContact";
-import ZehuCard from "../../components/zehu-card/ZehuCard";
 import CallButton from "../../components/call-btn/CallButton";
+import AllianceCard from "../../components/alliance-card/AllianceCard";
 
 const MainWrapper = styled.div`
   display: flex;
@@ -20,19 +20,35 @@ const MainWrapper = styled.div`
   background-color: #fff;
 `;
 
+const BannerText = styled.div`
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "PyeojinGothic", sans-serif !important;
+
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+`;
+
 const MainPage = () => {
   return (
     <MainWrapper>
       <MainLogo />
       <TopInput />
-      {/* <ImageSlide /> */}
-      <ZehuCard />
-      {/* <ImageBanner /> */}
-      {/* <ImageMainSlide /> */}
-      {/* <VideoComp /> */}
+      <BannerText>제휴카드 이용시 무료 렌탈</BannerText>
       <Matrix />
       <GridComp />
       <UseContact />
+      <AllianceCard />
       <FreeButton />
       <CallButton />
     </MainWrapper>
