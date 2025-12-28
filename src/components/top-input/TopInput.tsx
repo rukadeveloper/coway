@@ -141,7 +141,7 @@ const TopInput = () => {
         <SelectDay day={selectedDay} setDay={setSelectedDay} />
         <Agree agree={agreeChecked} setAgree={setAgreeChecked} />
         <button type="submit" disabled={disabled}>
-          상담 신청하기
+          제휴카드 이용 시 무료렌탈
         </button>
       </form>
     </TopperInput>
