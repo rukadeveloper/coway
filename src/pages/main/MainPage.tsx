@@ -44,7 +44,7 @@ const MainPage = () => {
     <MainWrapper>
       <MainLogo />
       <TopInput />
-      <BannerText>제휴카드 이용시 무료 렌탈</BannerText>
+      <BannerText>제휴카드 이용시 무료렌탈</BannerText>
       <AllianceCard />
       <Matrix />
       <BedList />

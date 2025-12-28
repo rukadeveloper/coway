@@ -46,8 +46,8 @@ const TopperInput = styled.div`
 
 const TopInput = () => {
   const [selectedDigital, setSelectedDigital] = useState({
-    content: "homecare",
-    index: 0,
+    content: "appliance",
+    index: 3,
     isOpen: false,
   });
   const [name, setName] = useState("");
@@ -65,41 +65,43 @@ const TopInput = () => {
   const disabled = !selectedDigital || !name || !phone || !agreeChecked;
 
   const combo_array = [
-    "홈케어 서비스 상담/homecare",
     "매트리스 상담/mattress",
     "침대 프레임 상담/bed_frame",
     "침대 프레임 + 매트리스 상담/bed_frame_mattress",
+    "생활가전제품 상담/appliance",
   ];
 
   const kakaoConsult = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://coway-dangguen-backs.vercel.app/api/send-sms", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          to: "01082420593",
-          message: `이름은 ${name}입니다. 번호는 ${phone.phone1}${
-            phone.phone2
-          }${phone.phone3}입니다. 상품은 ${
-            combo_array[selectedDigital.index].split("/")[1] ===
-            selectedDigital.content
-              ? combo_array[selectedDigital.index].split("/")[0]
-              : ""
-          }이고, 예약 희망 요일은 ${dayConvert(selectedDay!)}입니다.`,
-        }),
-      });
+      const response = await fetch(
+        "https://coway-dangguen-backs.vercel.app/api/send-sms",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            to: "01082420593",
+            message: `이름은 ${name}입니다. 번호는 ${phone.phone1}${
+              phone.phone2
+            }${phone.phone3}입니다. 상품은 ${
+              combo_array[selectedDigital.index].split("/")[1] ===
+              selectedDigital.content
+                ? combo_array[selectedDigital.index].split("/")[0]
+                : ""
+            }이고, 예약 희망 요일은 ${dayConvert(selectedDay!)}입니다.`,
+          }),
+        }
+      );
 
       const data = await response.json();
-      
+
       if (!response.ok) {
         console.error("SMS 전송 실패:", data);
         alert(`전송 실패: ${data.error || "알 수 없는 오류"}`);
-        return;
+      } else {
+        alert("문자가 전송되었습니다! 조금만 기다려주세요!");
       }
-
-      alert("문자가 전송되었습니다! 조금만 기다려주세요!");
     } catch (err: unknown) {
       console.error("API 호출 에러:", err);
       alert("제출 중 오류가 발생했습니다.");
@@ -111,8 +113,8 @@ const TopInput = () => {
         phone3: "",
       });
       setSelectedDigital({
-        content: "coway",
-        index: 0,
+        content: "appliance",
+        index: 3,
         isOpen: false,
       });
       setSelectedDay(null);
@@ -150,7 +152,7 @@ const TopInput = () => {
         <SelectDay day={selectedDay} setDay={setSelectedDay} />
         <Agree agree={agreeChecked} setAgree={setAgreeChecked} />
         <button type="submit" disabled={disabled}>
-          제휴카드 이용 시 무료렌탈
+          상담신청하기
         </button>
       </form>
     </TopperInput>

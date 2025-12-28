@@ -36,16 +36,10 @@ const FB = styled.div`
 
 const FreeButton = () => {
   const combo_array = [
-    "정수기_32종 상담/coway",
-    "업소용 정수기/coway_company",
-    "얼음 정수기/coway_ice",
-    "침대 매트리스/matrix",
-    "공기청정기/air",
-    "의류 청정기/cloth",
-    "비데/vide",
-    "연수기/yeonsoo",
-    "인덕션/induction",
-    "안마의자_베드/chair",
+    "매트리스 상담/mattress",
+    "침대 프레임 상담/bed_frame",
+    "침대 프레임 + 매트리스 상담/bed_frame_mattress",
+    "생활가전제품 상담/appliance",
   ];
   const [selectedDigital, setSelectedDigital] = useState({
     content: "coway",

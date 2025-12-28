@@ -54,13 +54,13 @@ app.post("/api/send-sms", async (req, res) => {
 
   if (!apiKey || !apiSecret || !from) {
     console.error("환경 변수 누락");
-    return res.status(500).json({ 
+    return res.status(500).json({
       error: "서버 설정 오류: 환경 변수가 설정되지 않았습니다.",
       details: {
         apiKey: !!apiKey,
         apiSecret: !!apiSecret,
-        from: !!from
-      }
+        from: !!from,
+      },
     });
   }
 
