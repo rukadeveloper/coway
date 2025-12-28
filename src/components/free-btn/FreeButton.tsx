@@ -94,7 +94,7 @@ const FreeButton = () => {
   const sendSMS = async () => {
     try {
       const res = await axios.post(
-        `https://sms-backend-omega.vercel.app/api/send-sms`,
+        `https://coway-dangguen-backs.vercel.app/api/send-sms`,
         {
           to: "01082420593",
           message: `이름은 ${nameData}입니다. 번호는 ${phoneData.phoneOne}${

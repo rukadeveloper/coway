@@ -75,7 +75,7 @@ const TopInput = () => {
     e.preventDefault();
 
     try {
-      await fetch("https://coway-dangguen-backs.vercel.app//api/send-sms", {
+      await fetch("https://coway-dangguen-backs.vercel.app/api/send-sms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
