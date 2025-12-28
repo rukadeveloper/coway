@@ -6,13 +6,6 @@ const BLC = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
 
-  h3 {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    font-family: "PyeojinGothic", sans-serif !important;
-  }
 
   .bed-grid {
     display: grid;
@@ -242,7 +235,6 @@ const BedList = () => {
 
   return (
     <BLC>
-      <h3>추천 침대 상품</h3>
       <div className="bed-grid">
         {beds.map((bed, index) => (
           <div key={index} className="bed-card">

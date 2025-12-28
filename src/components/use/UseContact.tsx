@@ -64,19 +64,14 @@ const US = styled.div`
     max-width: 130%;
   }
   > img[alt="mark"] {
-    position: absolute;
-    top: 0;
-    right: 0;
     width: 120px;
+    margin-bottom: 30px;
     @media screen and (max-width: 560px) {
-      position: relative;
-      margin-bottom: 30px;
+      width: 100px;
     }
   }
   .discount-badge {
-    position: absolute;
-    top: 0;
-    right: 120px;
+    position: relative;
     width: 150px;
     height: 150px;
     display: flex;
@@ -90,10 +85,8 @@ const US = styled.div`
     color: #fff;
     line-height: 1.4;
     box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    margin-bottom: 30px;
     @media screen and (max-width: 560px) {
-      position: relative;
-      right: auto;
-      margin-bottom: 30px;
       width: 130px;
       height: 130px;
       font-size: 16px;
