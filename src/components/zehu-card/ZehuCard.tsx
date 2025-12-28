@@ -5,6 +5,7 @@ const ZC = styled.div`
   height: 250px;
   position: relative;
   background-color: #f3f4f6;
+  margin-top: 40px;
   img {
     width: 100%;
     height: 100%;
@@ -39,6 +40,17 @@ const ZC = styled.div`
           margin-top: 16px;
         }
       }
+      &:nth-child(3) {
+        background-color: #000;
+        color: #fff;
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        width: fit-content;
+      }
     }
     @media screen and (max-width: 600px) {
       span {
@@ -47,6 +59,9 @@ const ZC = styled.div`
         }
         &:nth-child(2) {
           font-size: 16px;
+        }
+        &:nth-child(3) {
+          font-size: 14px;
         }
       }
     }
@@ -57,6 +72,9 @@ const ZC = styled.div`
         }
         &:nth-child(2) {
           font-size: 14px;
+        }
+        &:nth-child(3) {
+          font-size: 13px;
         }
       }
     }
@@ -73,6 +91,9 @@ const ZC = styled.div`
         &:nth-child(2) {
           font-size: 12px;
         }
+        &:nth-child(3) {
+          font-size: 11px;
+        }
       }
     }
   }
@@ -88,6 +109,7 @@ const ZehuCard = () => {
           최대 <b>월 3만원</b>의 청구 할인 혜택 <br />
           <strong>제휴카드 이용시 정수기 월 1,900원 부터~</strong>
         </span>
+        <span>제휴카드 이용시 무료 렌탈</span>
       </p>
       <img src={"/card.png"} alt="card" />
     </ZC>

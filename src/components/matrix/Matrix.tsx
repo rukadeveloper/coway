@@ -7,6 +7,7 @@ const MT = styled.div`
     font-size: 18px;
     padding-left: calc(11.55% / 2);
     text-align: center;
+    margin-top: 30px;
   }
   > p {
     padding-left: calc(11.55% / 2);

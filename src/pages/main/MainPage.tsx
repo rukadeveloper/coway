@@ -29,11 +29,11 @@ const MainPage = () => {
     <MainWrapper>
       <MainLogo />
       <TopInput />
-      <ImageSlide />
+      {/* <ImageSlide /> */}
       <ZehuCard />
-      <ImageBanner />
-      <ImageMainSlide />
-      <VideoComp />
+      {/* <ImageBanner /> */}
+      {/* <ImageMainSlide /> */}
+      {/* <VideoComp /> */}
       <Matrix />
       <GridComp />
       <UseContact />
