@@ -36,24 +36,17 @@ const BLC = styled.div`
 
     .bed-image {
       width: 100%;
-      height: 180px;
+      height: 220px;
       background-color: #f3f4f6;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      position: relative;
 
       img {
-        position: absolute;
-        width: auto;
-        height: auto;
-        max-width: 75%;
-        max-height: 90%;
-        object-fit: contain;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -115,7 +108,7 @@ const BLC = styled.div`
 
     .bed-card {
       .bed-image {
-        height: 160px;
+        height: 180px;
       }
 
       .bed-info {

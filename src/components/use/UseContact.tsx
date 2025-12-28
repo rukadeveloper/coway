@@ -21,7 +21,7 @@ const US = styled.div`
   }
   > p {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
     font-weight: 700;
     width: 100%;
@@ -30,11 +30,11 @@ const US = styled.div`
       background-color: #000;
       color: #fff;
       border-radius: 6px;
-      font-size: 18px;
+      font-size: 15px;
     }
     &:nth-of-type(3) {
       span {
-        font-size: 30px;
+        font-size: 24px;
         display: block;
       }
     }
@@ -44,7 +44,18 @@ const US = styled.div`
     &:nth-of-type(2),
     &:nth-of-type(3) {
       @media screen and (max-width: 400px) {
-        font-size: 14px;
+        font-size: 13px;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+      &:nth-of-type(1) {
+        font-size: 13px;
+      }
+      &:nth-of-type(3) {
+        span {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -62,6 +73,32 @@ const US = styled.div`
       margin-bottom: 30px;
     }
   }
+  .discount-badge {
+    position: absolute;
+    top: 0;
+    right: 120px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+    border-radius: 50%;
+    color: #fff;
+    line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    @media screen and (max-width: 560px) {
+      position: relative;
+      right: auto;
+      margin-bottom: 30px;
+      width: 130px;
+      height: 130px;
+      font-size: 16px;
+    }
+  }
 `;
 
 const UseContact = () => {
@@ -71,18 +108,20 @@ const UseContact = () => {
         최신 인기 렌탈 가전 <br /> 합리적으로 이용하세요!
       </h2> */}
       <img src="/mark.png" alt="mark" />
-      <h2>코웨이 갤러리 매장</h2>
-      <video autoPlay muted loop playsInline>
-        <source src="/44seconds.mp4" type="video/mp4" />
-      </video>
-      <p>홈케어 닥터겸 상담 매니저 준디</p>
-      <p>직통 010-5790-0593</p>
+      <div className="discount-badge">
+        12개월
+        <br />
+        반값할인
+      </div>
+      <p>코웨이 생활가전 제품</p>
+      <p>렌탈료 최대 12개월 반값할인 행사중!</p>
       <p>
-        약속은 생명이다 라는
-        <br /> 생활의 좌우명을 가지고 <br />
-        친절 상담 방문하고 있습니다.<span>😄</span>
+        정수기 공기청정기, 의류 스타일러, 제습기 <br />
+        비데, 연수기, 인덕션, 스파, 에어컨, 안마의자 <br />
+        똑똑한 소비자가 되자! <br /> 상담 방문 시 친절상담 해 드립니다!
+        <span>😄</span>
       </p>
-      <img src="/family.png" alt="family" />
+      <img src="/family.jpeg" alt="family" style={{ marginBottom: "200px" }} />
     </US>
   );
 };

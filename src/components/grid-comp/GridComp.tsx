@@ -275,13 +275,6 @@ const GridComp = () => {
 
   return (
     <GC>
-      <div id="video-container">
-        <h2>
-          방안에 맞는 맞춤 스타일로..
-          <br /> 침대높이 매트리스 경도
-          <br /> 다양한 디자인 방문상담해 드립니다!
-        </h2>
-      </div>
       <h2>코웨이 생활가전제품</h2>
       <GCG>
         <div className="wrapper">

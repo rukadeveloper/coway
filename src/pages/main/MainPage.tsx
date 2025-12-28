@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 import FreeButton from "../../components/free-btn/FreeButton";
-import GridComp from "../../components/grid-comp/GridComp";
 import MainLogo from "../../components/logo/MainLogo";
 import Matrix from "../../components/matrix/Matrix";
 import TopInput from "../../components/top-input/TopInput";
@@ -49,7 +48,6 @@ const MainPage = () => {
       <AllianceCard />
       <Matrix />
       <BedList />
-      <GridComp />
       <UseContact />
       <FreeButton />
       <CallButton />
