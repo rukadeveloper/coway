@@ -4,7 +4,6 @@ const AC = styled.div`
   width: 100%;
   padding: 0 calc(11.55% / 2);
   margin-top: 40px;
-  margin-bottom: 150px;
 
   h3 {
     text-align: center;
@@ -110,6 +109,29 @@ const AC = styled.div`
       font-size: 14px;
     }
   }
+
+  .bottom-banner {
+    width: calc(100% + (11.55% / 2) * 2);
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "PyeojinGothic", sans-serif !important;
+    margin-left: calc(-11.55% / 2);
+    margin-right: calc(-11.55% / 2);
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 16px;
+    }
+  }
 `;
 
 const AllianceCard = () => {
@@ -167,6 +189,7 @@ const AllianceCard = () => {
           </div>
         ))}
       </div>
+      <div className="bottom-banner">무료렌탈 + 홈케어 서비스까지!!</div>
     </AC>
   );
 };
