@@ -1,4 +1,4 @@
-import { type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction, useEffect, useRef } from "react";
 
 import styled from "styled-components";
 import type { Content } from "./EnterInput";
@@ -60,8 +60,29 @@ const Combobox = ({
   setState: Dispatch<SetStateAction<Content>>;
   isUp?: boolean;
 }) => {
+  const comboRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        comboRef.current &&
+        !comboRef.current.contains(event.target as Node)
+      ) {
+        setState((prev) => ({ ...prev, isOpen: false }));
+      }
+    };
+
+    if (state.isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [state.isOpen, setState]);
+
   return (
-    <Combo>
+    <Combo ref={comboRef}>
       <button
         type="button"
         onClick={() => setState((prev) => ({ ...prev, isOpen: true }))}
@@ -74,8 +95,9 @@ const Combobox = ({
       </button>
       {state.isOpen && (
         <div className={`list ${isUp ? "up" : ""}`}>
-          {combo_array.map((combo: any, index: number) => (
+          {combo_array.map((combo: string, index: number) => (
             <button
+              key={index}
               type="button"
               onClick={() => {
                 setState({

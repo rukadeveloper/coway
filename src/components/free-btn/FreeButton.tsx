@@ -109,7 +109,8 @@ const FreeButton = () => {
       );
       console.log(res);
       alert("문자가 전송되었습니다! 조금만 기다려주세요!");
-    } catch (e) {
+    } catch (err: unknown) {
+      console.error(err);
       alert("제출 중 오류가 발생했습니다!");
     } finally {
       setNameData("");
