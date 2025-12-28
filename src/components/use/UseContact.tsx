@@ -44,17 +44,17 @@ const US = styled.div`
     &:nth-of-type(2),
     &:nth-of-type(3) {
       @media screen and (max-width: 400px) {
-        font-size: 13px;
+        font-size: 15px;
       }
     }
     @media screen and (max-width: 600px) {
-      font-size: 14px;
+      font-size: 15px;
       &:nth-of-type(1) {
-        font-size: 13px;
+        font-size: 14px;
       }
       &:nth-of-type(3) {
         span {
-          font-size: 20px;
+          font-size: 22px;
         }
       }
     }
@@ -72,12 +72,12 @@ const US = styled.div`
   }
   .discount-badge {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     text-align: center;
     background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
@@ -87,9 +87,9 @@ const US = styled.div`
     box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
     margin-bottom: 30px;
     @media screen and (max-width: 560px) {
-      width: 130px;
-      height: 130px;
-      font-size: 16px;
+      width: 110px;
+      height: 110px;
+      font-size: 13px;
     }
   }
 `;
@@ -110,7 +110,7 @@ const UseContact = () => {
       <p>렌탈료 최대 12개월 반값할인 행사중!</p>
       <p>
         정수기 공기청정기, 의류 스타일러, 제습기 <br />
-        비데, 연수기, 인덕션, 스파, 에어컨, 안마의자 <br />
+        비데, 연수기, 인덕션, 쇼파, 에어컨, 안마의자 <br />
         똑똑한 소비자가 되자! <br /> 상담 방문 시 친절상담 해 드립니다!
         <span>😄</span>
       </p>
