@@ -75,7 +75,7 @@ const TopInput = () => {
     e.preventDefault();
 
     try {
-      await fetch("https://coway-dangguen-backs.vercel.app/api/send-sms", {
+      const response = await fetch("https://coway-dangguen-backs.vercel.app/api/send-sms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -91,9 +91,17 @@ const TopInput = () => {
         }),
       });
 
+      const data = await response.json();
+      
+      if (!response.ok) {
+        console.error("SMS 전송 실패:", data);
+        alert(`전송 실패: ${data.error || "알 수 없는 오류"}`);
+        return;
+      }
+
       alert("문자가 전송되었습니다! 조금만 기다려주세요!");
     } catch (err: unknown) {
-      console.error(err);
+      console.error("API 호출 에러:", err);
       alert("제출 중 오류가 발생했습니다.");
     } finally {
       setName("");
