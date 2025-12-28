@@ -83,6 +83,14 @@ const BLC = styled.div`
         color: #14aafe;
         font-weight: 600;
         font-family: "PyeojinGothic", sans-serif !important;
+        margin-bottom: 8px;
+      }
+
+      .bed-card-price {
+        font-size: 12px;
+        color: #ff6b6b;
+        font-weight: 600;
+        font-family: "PyeojinGothic", sans-serif !important;
       }
     }
   }
@@ -169,37 +177,42 @@ const BedList = () => {
     {
       name: "BEREX 모디&모던 침대",
       image:
-        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_6700_attimg_org.png",
+        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_7273_attimg_org.png",
       buyPrice: "2,139,300원",
       rentalPrice: "월 23,220원~",
+      cardPrice: "월 0원~",
     },
     {
       name: "BEREX 스마트&그레이스 침대",
       image:
-        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_6701_attimg_org.png",
+        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_7266_attimg_org.png",
       buyPrice: "5,625,000원",
       rentalPrice: "월 72,720원~",
+      cardPrice: "월 42,720원~",
     },
     {
       name: "BEREX 루나 프레임",
       image:
-        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_6878_attimg_org.png",
+        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_6880_attimg_org.png?v=291040",
       buyPrice: "1,600,000원",
       rentalPrice: "월 17,900원~",
+      cardPrice: "월 0원~",
     },
     {
       name: "BEREX 루네어 매트리스",
       image:
-        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_6879_attimg_org.png",
+        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_6878_attimg_org.png?v=281125",
       buyPrice: "1,710,000원",
       rentalPrice: "월 14,900원~",
+      cardPrice: "월 0원~",
     },
     {
       name: "BEREX 더블 사이드 매트리스",
       image:
-        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_6746_attimg_org.png",
+        "https://mall.cowaystatic.com/static/upload/product/product/ID0101_5017_attimg_org.png",
       buyPrice: "1,617,000원",
       rentalPrice: "월 15,900원~",
+      cardPrice: "월 0원~",
     },
     {
       name: "BEREX 우디 프레임",
@@ -207,6 +220,7 @@ const BedList = () => {
         "https://mall.cowaystatic.com/static/upload/product/product/ID0101_4819_attimg_org.png",
       buyPrice: "1,485,000원",
       rentalPrice: "월 15,900원~",
+      cardPrice: "월 0원~",
     },
     {
       name: "BEREX 원바디 2 매트리스",
@@ -214,6 +228,7 @@ const BedList = () => {
         "https://mall.cowaystatic.com/static/upload/product/product/ID0101_4182_attimg_org.png?v=311042",
       buyPrice: "1,430,000원",
       rentalPrice: "월 19,900원~",
+      cardPrice: "월 0원~",
     },
     {
       name: "BEREX 컴팩트 메모리폼 매트리스",
@@ -221,6 +236,7 @@ const BedList = () => {
         "https://mall.cowaystatic.com/static/upload/product/product/ID0101_584_attimg_org.png?v=301650",
       buyPrice: "1,870,000원",
       rentalPrice: "월 14,900원~",
+      cardPrice: "월 0원~",
     },
   ];
 
@@ -241,6 +257,9 @@ const BedList = () => {
               </div>
               <div className="bed-rental">
                 <span>렌탈 {bed.rentalPrice}</span>
+              </div>
+              <div className="bed-card-price">
+                <span>제휴카드 {bed.cardPrice}</span>
               </div>
             </div>
           </div>

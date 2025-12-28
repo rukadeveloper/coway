@@ -67,7 +67,7 @@ const TopInput = () => {
   const combo_array = [
     "홈케어 서비스 상담/homecare",
     "매트리스 상담/mattress",
-    "현대 프레임 상담/hyundai_frame",
+    "침대 프레임 상담/bed_frame",
     "침대 프레임 + 매트리스 상담/bed_frame_mattress",
   ];
 
