@@ -7,7 +7,6 @@ import SelectDay from "../top-input/SelectDay";
 const NI = styled.div`
   width: 100%;
   max-width: 600px;
-  max-height: 650px;
   background-image: linear-gradient(to bottom, #10a7e0 0%, #095b7a 100%);
   position: fixed;
   bottom: 0;
@@ -19,16 +18,19 @@ const NI = styled.div`
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
+  min-height: 650px;
 
   @media (max-width: 768px) {
-    width: 100%;
-    max-width: 100%;
-    max-height: 60vh;
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100dvh;
+    height: 100dvh;
     left: 0;
     transform: none;
     padding: 0 15px;
     padding-top: 15px;
     border-radius: 15px 15px 0 0;
+    max-height: none;
   }
 
   span.title {
