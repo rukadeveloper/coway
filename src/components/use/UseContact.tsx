@@ -35,7 +35,7 @@ const US = styled.div`
     &:nth-of-type(3) {
       span {
         font-size: 24px;
-        display: block;
+        display: inline;
       }
     }
     &:nth-of-type(3) {
@@ -111,7 +111,7 @@ const UseContact = () => {
       <p>
         정수기 공기청정기, 의류 스타일러, 제습기 <br />
         비데, 연수기, 인덕션, 쇼파, 에어컨, 안마의자 <br />
-        똑똑한 소비자가 되자! <br /> 상담 방문 시 친절상담 해 드립니다!
+        똑똑한 소비자가 되자! <br /> 상담 방문 시 친절상담 해 드립니다!{" "}
         <span>😄</span>
       </p>
       <img src="/family.jpeg" alt="family" style={{ marginBottom: "200px" }} />
