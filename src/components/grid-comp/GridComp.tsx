@@ -282,9 +282,6 @@ const GridComp = () => {
           <br /> 침대높이 매트리스 경도
           <br /> 다양한 디자인 방문상담해 드립니다!
         </h2>
-        <video autoPlay muted loop playsInline>
-          <source src={"/market_video.mp4"} type="video/mp4" />
-        </video>
       </div>
       <h2>코웨이 생활가전제품</h2>
       <GCG>

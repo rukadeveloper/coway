@@ -8,6 +8,7 @@ import TopInput from "../../components/top-input/TopInput";
 import UseContact from "../../components/use/UseContact";
 import CallButton from "../../components/call-btn/CallButton";
 import AllianceCard from "../../components/alliance-card/AllianceCard";
+import BedList from "../../components/bed-list/BedList";
 
 const MainWrapper = styled.div`
   display: flex;
@@ -47,6 +48,7 @@ const MainPage = () => {
       <BannerText>제휴카드 이용시 무료 렌탈</BannerText>
       <AllianceCard />
       <Matrix />
+      <BedList />
       <GridComp />
       <UseContact />
       <FreeButton />

@@ -65,6 +65,31 @@ const MT = styled.div`
     justify-content: center;
     margin-top: 30px;
   }
+
+  .health-message {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px calc(11.55% / 2);
+    font-family: "PyeojinGothic", sans-serif !important;
+    background: linear-gradient(135deg, #14aafe 0%, #0a7ab7 100%);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(20, 170, 254, 0.3);
+    letter-spacing: 1px;
+
+    @media screen and (max-width: 550px) {
+      font-size: 18px;
+      padding: 16px calc(11.55% / 2);
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 16px;
+      padding: 12px calc(11.55% / 2);
+    }
+  }
   @media screen and (max-width: 550px) {
     h2 {
       font-size: 15px;
@@ -158,6 +183,7 @@ const Matrix = () => {
           </p>
         </li>
       </ul>
+      <div className="health-message">건강한 수면을 산다!</div>
       <div className="video">
         <iframe
           width="560"
