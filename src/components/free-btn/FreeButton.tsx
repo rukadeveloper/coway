@@ -42,7 +42,7 @@ const FreeButton = () => {
     "생활가전제품 상담/appliance",
   ];
   const [selectedDigital, setSelectedDigital] = useState({
-    content: "coway",
+    content: "mattress",
     index: 0,
     isOpen: false,
   });
@@ -114,7 +114,7 @@ const FreeButton = () => {
         phoneThree: "",
       });
       setSelectedDigital({
-        content: "coway",
+        content: "mattress",
         index: 0,
         isOpen: false,
       });

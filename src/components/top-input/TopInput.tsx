@@ -46,8 +46,8 @@ const TopperInput = styled.div`
 
 const TopInput = () => {
   const [selectedDigital, setSelectedDigital] = useState({
-    content: "appliance",
-    index: 3,
+    content: "mattress",
+    index: 0,
     isOpen: false,
   });
   const [name, setName] = useState("");
@@ -113,8 +113,8 @@ const TopInput = () => {
         phone3: "",
       });
       setSelectedDigital({
-        content: "appliance",
-        index: 3,
+        content: "mattress",
+        index: 0,
         isOpen: false,
       });
       setSelectedDay(null);
