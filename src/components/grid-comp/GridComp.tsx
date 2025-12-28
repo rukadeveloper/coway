@@ -275,7 +275,6 @@ const GridComp = () => {
 
   return (
     <GC>
-      <img src="/care_service.jpeg" alt="care_service" />
       <div id="video-container">
         <h2>
           방안에 맞는 맞춤 스타일로..

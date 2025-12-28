@@ -24,6 +24,9 @@ const GridItem = styled.div`
       position: absolute;
       bottom: 60px;
       z-index: 10;
+      max-width: 70%;
+      left: 50%;
+      transform: translateX(-50%);
     }
     .package {
       position: absolute;
@@ -77,6 +80,35 @@ const GridItem = styled.div`
           font-size: 20px;
           line-height: 28px;
           font-weight: 700;
+        }
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      img {
+        bottom: 50px;
+        max-width: 65%;
+      }
+      > span {
+        top: 20px;
+        left: 20px;
+        font-size: 16px;
+        b {
+          font-size: 20px;
+        }
+      }
+      .sale-info {
+        width: 70px;
+        height: 70px;
+        right: 20px;
+        bottom: 10px;
+        span {
+          &:nth-child(1) {
+            font-size: 12px;
+          }
+          &:nth-child(2) {
+            font-size: 18px;
+          }
         }
       }
     }

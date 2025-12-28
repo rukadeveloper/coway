@@ -139,20 +139,11 @@ const MT = styled.div`
 const Matrix = () => {
   return (
     <MT>
-      <h2>
-        홈케어 닥터겸, 담당 매니저 준디만의 <br />
-        특별한 혜택 3가지
-      </h2>
-      <p>
-        하나, 상담 방문시 침대 ~ 매트리스 홈케어 <br /> 50,000원권 1회 무료
-        서비스
-        <br />
-        둘, 2개 이상 렌탈시 15%할인 및 <br />
-        첫달 렌탈비 현금 지원 (최대 120,000원)
-        <br />
-        셋, 매트리스 렌탈시 <br />
-        고급 방수 커버 선물 증정해 드립니다.
-      </p>
+      <img
+        src="/care_service.jpeg"
+        alt="care_service"
+        style={{ width: "100%", marginTop: "30px" }}
+      />
       <ul>
         <li>
           <p>
