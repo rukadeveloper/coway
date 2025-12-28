@@ -18,19 +18,19 @@ const NI = styled.div`
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
-  min-height: 650px;
+  max-height: 90dvh;
 
   @media (max-width: 768px) {
     width: 100vw;
     max-width: 100vw;
-    min-height: 100dvh;
     height: 100dvh;
     left: 0;
     transform: none;
     padding: 0 15px;
     padding-top: 15px;
     border-radius: 15px 15px 0 0;
-    max-height: none;
+    max-height: 100dvh;
+    min-height: unset;
   }
 
   span.title {
