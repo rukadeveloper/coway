@@ -25,7 +25,8 @@ const US = styled.div`
     margin-bottom: 20px;
     font-weight: 700;
     width: 100%;
-    &:nth-of-type(1) {
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
       padding: 6px;
       background-color: #000;
       color: #fff;
@@ -92,20 +93,30 @@ const US = styled.div`
       font-size: 13px;
     }
   }
+  .back-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    @media screen and (max-width: 560px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
 `;
 
 const UseContact = () => {
   return (
     <US>
-      {/* <h2>
-        최신 인기 렌탈 가전 <br /> 합리적으로 이용하세요!
-      </h2> */}
-      <img src="/mark.png" alt="mark" />
+      <img src="/mark2.png" alt="mark" />
+      <p>홈케어 닥터 겸 담당 매니저 준디</p>
       <div className="discount-badge">
         12개월
         <br />
         반값할인
       </div>
+      <img src="/back.png" alt="back" className="back-img" />
       <p>코웨이 생활가전 제품</p>
       <p>렌탈료 최대 12개월 반값할인 행사중!</p>
       <p>
