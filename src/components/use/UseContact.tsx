@@ -110,13 +110,13 @@ const UseContact = () => {
   return (
     <US>
       <img src="/mark2.png" alt="mark" />
+      <p>홈케어 닥터 겸 담당 매니저 준디</p>
+      <img src="/back.png" alt="back" className="back-img" />
       <div className="discount-badge">
         12개월
         <br />
         반값할인
       </div>
-      <img src="/back.png" alt="back" className="back-img" />
-      <p>홈케어 닥터 겸 담당 매니저 준디</p>
       <p>코웨이 생활가전 제품</p>
       <p>렌탈료 최대 12개월 반값할인 행사중!</p>
       <p>

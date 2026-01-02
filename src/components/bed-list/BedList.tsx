@@ -149,12 +149,13 @@ const BLC = styled.div`
     @media screen and (max-width: 600px) {
       font-size: 14px;
     }
+  }
 
   .video-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
 
     video {
       width: 100%;
@@ -162,6 +163,7 @@ const BLC = styled.div`
       height: auto;
       border-radius: 8px;
     }
+  }
   }
 `;
 
@@ -261,9 +263,14 @@ const BedList = () => {
         <span className="store-name">코웨이 갤러리 매장</span> 침대도 정수기처럼
         깐깐하게...
       </div>
-      <div className="video-container" style={{ marginTop: "30px" }}>
+      <div className="video-container">
         <video autoPlay muted loop playsInline>
           <source src="/market_video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div className="video-container">
+        <video autoPlay muted loop playsInline>
+          <source src="/market_video2.mp4" type="video/mp4" />
         </video>
       </div>
     </BLC>
