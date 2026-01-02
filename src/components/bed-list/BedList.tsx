@@ -264,7 +264,6 @@ const BedList = () => {
       <div className="video-container" style={{ marginTop: "30px" }}>
         <video autoPlay muted loop playsInline>
           <source src="/market_video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </div>
     </BLC>
